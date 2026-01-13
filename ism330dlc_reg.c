@@ -7668,7 +7668,7 @@ int32_t ism330dlc_sh_cfg_write(const stmdev_ctx_t *ctx,
 
   if (ret == 0)
   {
-    slv0_add.slave0_add = val->slv0_add;
+    slv0_add.slave0_add = (uint8_t)(val->slv0_add >> 1);
     slv0_add.rw_0 = 0;
     ret = ism330dlc_write_reg(ctx, ISM330DLC_SLV0_ADD,
                               (uint8_t *)&slv0_add, 1);
@@ -7712,7 +7712,7 @@ int32_t ism330dlc_sh_slv0_cfg_read(const stmdev_ctx_t *ctx,
 
   if (ret == 0)
   {
-    slv0_add.slave0_add = val->slv_add;
+    slv0_add.slave0_add = (uint8_t)(val->slv_add >> 1);
     slv0_add.rw_0 = 1;
     ret = ism330dlc_write_reg(ctx, ISM330DLC_SLV0_ADD,
                               (uint8_t *)&slv0_add, 1);
@@ -7763,7 +7763,7 @@ int32_t ism330dlc_sh_slv1_cfg_read(const stmdev_ctx_t *ctx,
 
   if (ret == 0)
   {
-    slv1_add.slave1_add  = val->slv_add;
+    slv1_add.slave1_add  = (uint8_t)(val->slv_add >> 1);
     slv1_add.r_1 = 1;
     ret = ism330dlc_write_reg(ctx, ISM330DLC_SLV1_ADD,
                               (uint8_t *)&slv1_add, 1);
@@ -7814,7 +7814,7 @@ int32_t ism330dlc_sh_slv2_cfg_read(const stmdev_ctx_t *ctx,
 
   if (ret == 0)
   {
-    slv2_add.slave2_add  = val->slv_add;
+    slv2_add.slave2_add  = (uint8_t)(val->slv_add >> 1);
     slv2_add.r_2 = 1;
     ret = ism330dlc_write_reg(ctx, ISM330DLC_SLV2_ADD,
                               (uint8_t *)&slv2_add, 1);
@@ -7865,7 +7865,7 @@ int32_t ism330dlc_sh_slv3_cfg_read(const stmdev_ctx_t *ctx,
 
   if (ret == 0)
   {
-    slv3_add.slave3_add  = val->slv_add;
+    slv3_add.slave3_add  = (uint8_t)(val->slv_add >> 1);
     slv3_add.r_3 = 1;
     ret = ism330dlc_write_reg(ctx, ISM330DLC_SLV3_ADD,
                               (uint8_t *)&slv3_add, 1);
