@@ -108,7 +108,7 @@ This directory contains the ISM330DLC component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section7" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section7" aria-hidden="true">
 <label for="collapse-section7" aria-hidden="true">V2.2.0 / 07-Oct-2025</label>
 <div>
 
@@ -116,6 +116,18 @@ This directory contains the ISM330DLC component drivers.
 
 - Added checks to avoid writes random content on pointers
 - Adding CODE_OF_CONDUCT.md and SECURITY.md
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section8" checked aria-hidden="true">
+<label for="collapse-section8" aria-hidden="true">V2.2.1 / 15-Jan-2026</label>
+<div>
+
+## Main changes
+
+- Change bit address representation for sensor-hub from 7 to 8 bit
 
 ##
 
